@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>带关闭按钮的滚动广告</title>
+    <style>
+        #main {
+            text-align: center;
+        }
+
+        #ad {
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            z-index: 1;
+        }
+
+        #close {
+            float: left;
+            position: absolute;
+            z-index: 3;
+            cursor: hand;
+        }
+    </style>
+</head>
+<body onload="first()" onscroll="setTimeout('scroll()', 10)">
+<script src="js/colse.js"></script>
+
+
+<div id="ad"><img src="images/advpic.jpg" alt=""> <img id="close" src="images/close.jpg" alt=""></div>
+<div id="main"><img src="images/contentpic.jpg" alt=""></div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>课工场论坛列表</title>
+    <link href="css/bbs.css" rel="stylesheet">
+</head>
+<body>
+<div class="bbs">
+    <header id="postMessage"><span>我要发帖</span></header>
+    <section id="section">
+        <ul id="ul">
+            <li id="li" style="display: none">
+                <div>
+                    <img src="images/tou01.jpg">
+                </div>
+                <div>
+                    <h3 style="width: 500px">如何学习</h3>
+                    <p style="width: 500px">
+                        板块:<span></span>发表时间：<span></span>
+                    </p>
+                </div>
+            </li>
+            <li></li>
+        </ul>
+    </section>
+    <div class="post" id="post">
+        <input class="title" id="title" placeholder="请输入标题（1-50个字符）">
+        <label>
+            所属版块：
+            <select id="select">
+                <option>请选择版块</option>
+                <option>电子书籍</option>
+                <option>新课来了</option>
+                <option>新手报到</option>
+                <option>职业规划</option>
+            </select>
+        </label>
+        <textarea id="content" class="content"></textarea>
+        <input id="btn" class="btn" value="发布">
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    const section = document.getElementById("section")
+    const postMessage = document.getElementById("postMessage")
+    const post = document.getElementById("post")
+    const btn = document.getElementById("btn")
+    const title = document.getElementById("title")
+    const select = document.getElementById("select")
+    const content = document.getElementById("content")
+    const ul = document.getElementById("ul")
+    postMessage.onclick = function () {
+        post.style.display = "block"
+        postMessage.style.removeProperty("width")
+    }
+    btn.onclick = function () {
+        console.log(title.value)
+        const se = select.options[select.selectedIndex].text
+        console.log(se)
+        console.log(content.value)
+        const li = document.createElement("li")
+        const div1 = document.createElement("div")
+        const div2 = document.createElement("div")
+        const img = document.createElement("img")
+        const date = new Date()
+        year = date.getFullYear()
+        month = date.getMonth() + 1
+        day = date.getDate()
+        hour = date.getHours()
+        minute = date.getMinutes()
+        img.src = "images/tou0" + Math.floor(Math.random() * 4) + ".jpg"
+        const h3 = document.createElement("h3")
+        h3.innerHTML = "<h3 style='width: 500px'>" + title.value + "</h3>"
+        const p = document.createElement("p")
+        p.style.width = "500px"
+        p.innerHTML = "板块:<span>" + se.toString() + "</span>发表时间：<span>" + year + "-" + month + "-" + day + " " + hour + ":" + month + "\t" + "</span>"
+        div1.appendChild(img)
+        li.appendChild(div1)
+        div2.appendChild(h3)
+        div2.appendChild(p)
+        li.appendChild(div2)
+        ul.appendChild(li)
+        title.value = ""
+        content.value = ""
+        post.style.display = "none"
+    }
+
+
+</script>
+</body>
+</html>

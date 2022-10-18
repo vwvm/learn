@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>JQuery表单验证</title>
+</head>
+
+<body>
+<form>
+  <input id="txt_submit" type="text" name="test" placeholder="请输入6~10个字符的中文"><span id="msg"></span>
+  <button id="btn_submit" type="submit">提交</button>
+</form>
+<script src="js/jquery.js"></script>
+<script>
+  // HTML DOM加载完成后执行JS代码
+  $(function() {
+
+    $("#btn_submit").click(function() {
+      var strText = $("#txt_submit").val();
+
+      // 必填项验证
+      if ("" == strText) {
+        $("#msg").html("该输入项不能为空");
+        return false;
+      }
+
+      // 最小长度验证
+      if (strText.length < 6) {
+        $("#msg").html("输入长度不能小于6");
+        return false;
+      }
+
+      // 最大长度验证
+      if (strText.length > 10) {
+        $("#msg").html("输入长度不能大于10");
+        return false;
+      }
+
+      // 汉字验证
+      if (!/^[\u4e00-\u9fa5]+$/.test(strText)) {
+        $("#msg").html("必须输入汉字");
+        return false;
+      }
+
+      // 错误信息清空
+      $("#msg").html("");
+      return true;
+
+    });
+
+    // JS代码到此为止
+  });
+
+</script>
+
+</body>
+
+</html>

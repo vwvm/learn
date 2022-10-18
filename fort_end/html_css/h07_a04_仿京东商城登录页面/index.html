@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东登录页</title>
+    <style>
+        header {
+            width: 990px;
+            margin: 0 auto;
+        }
+
+        img {
+            float: left;
+        }
+
+        h3 {
+            margin-top: 14px;
+            padding-left: 22px;
+            font-size: 17px;
+            float: left;
+            color: #4b4945;
+        }
+
+        .clear {
+            clear: left;
+        }
+
+        article {
+            height: 450px;
+        }
+
+        footer {
+            width: 990px;
+            margin: 0 auto;
+        }
+
+        .content {
+
+            background-color: #E83854;
+            background-size: 100% 100%;
+        }
+
+        .wrap {
+            width: 990px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .login-box {
+            height: 100%;
+            background-image: url("image/banner.png");
+            background-repeat: no-repeat;
+        }
+
+        .login-form {
+            background-color: #fff;
+            width: 308px;
+            height: 288px;
+            /*border-radius: 15px;*/
+            padding: 10px 40px;
+            position: relative;
+            left: 55%;
+            transform: translate(0%, 10%);
+        }
+
+        a {
+            float: right;
+            background-image: url("image/icon5.jpg");
+            background-repeat: no-repeat;
+            background-position: left;
+            padding-left: 20px;
+            color: red;
+            text-decoration: none;
+        }
+
+        input {
+            width: 90%;
+            height: 30px;
+            margin-top: 15px;
+            padding-left: 45px;
+            background-image: url("image/icon1.jpg");
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+
+        #password {
+            background-image: url("image/icon2.jpg");
+        }
+
+        p.京东会员 {
+            color: #4b4945;
+            font-weight: bold;
+        }
+
+        p.自动登录 {
+            float: left;
+        }
+
+        p.忘记密码 {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="image/logo.png" alt="">
+    <h3>欢迎登录</h3>
+    <div class="clear"></div>
+</header>
+<article class="content">
+    <div class="wrap">
+        <div class="login-box">
+
+            <div class="login-form">
+
+                <p class="京东会员">京东会员<a href="">立即注册</a></p>
+                <form action="" method="post" id="loginForm">
+                    <input value="邮箱/用户名/已验证手机" style="color: #4b4945">
+                    <input id="password">
+                    <input type="checkbox" style="width: 15px; float: left ;margin-top: 13px;background-color: #DEDEDE">
+                    <p class="自动登录">自动登录</p>
+                    <p class="忘记密码">忘记密码?</p>
+                    <button style="width: 107%;height: 38px; background-color: #E4393C;border-style: none;color: #F8F8F3">
+                        登 录
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</article>
+
+<footer>
+    <p style="position: center; text-align: center">
+        关于我们| 联系我们| 人才招聘| 商家入驻| 广告服务| 手机京东| 友情链接| 销售联盟| 京东社区| 京东公益| English Site
+        Copyright?2004-2017 京东JD.com 版权所有
+    </p>
+</footer>
+
+
+</body>
+</html>

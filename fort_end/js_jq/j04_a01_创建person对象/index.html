@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<p id="intro"></p>
+<script>
+    function Person() {
+
+    }
+
+    Person.prototype.name = "朗晓明"
+    Person.prototype.age = "38"
+    Person.prototype.work = "中国内地男演员、歌手"
+    Person.prototype.address = "中国北京海定区"
+    const ps = new Person()
+    document.getElementById("intro").innerHTML =
+        "姓名：" + ps.name + "<br>" +
+        "年龄：" + ps.age + "<br>" +
+        "工作：" + ps.work + "<br>" +
+        "地址：" + ps.address + "<br>"
+
+</script>
+
+</body>
+</html>

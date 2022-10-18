@@ -1,0 +1,6 @@
+
+
+设置小数位数为2位。
+
+var numFloat = 1.233333；
+numFloat.toFixed(2);

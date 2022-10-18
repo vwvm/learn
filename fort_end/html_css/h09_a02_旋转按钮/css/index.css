@@ -1,0 +1,23 @@
+ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+}
+
+li:hover {
+    animation: mymove 5s infinite;
+    -webkit-animation: mymove 5s infinite
+}
+
+@keyframes mymove {
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1.2);
+    }
+
+}

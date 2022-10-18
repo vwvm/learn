@@ -1,0 +1,62 @@
+body {
+    font-family: 宋体, Verdana, serif;
+    line-height: 24px;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+    border: 1px solid blue;
+    padding: 0;
+}
+
+li {
+    width: 60px;
+    float: left;
+    background-color: #EAFFFA;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+
+}
+
+.ul2 {
+    margin: 0;
+    border: none;
+    width: 100%;
+    display: table;
+    background-color: #fb6815;
+}
+
+.ul2 li {
+    background-color: #fb6815;
+    display: table-cell;
+    width: 52px;
+    color: #EAFFFA;
+}
+
+.ul2 li:hover {
+    text-decoration: underline;
+}
+
+.div1 {
+    height: 350px;
+    border: 1px solid green;
+}
+
+p {
+    font-size: 10px;
+    line-height: 20px;
+}
+.imgNo{
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+.imgNo1{
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 470px;
+}

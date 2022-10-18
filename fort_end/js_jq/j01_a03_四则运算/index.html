@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    const numberOne = prompt("请输入第一个值");
+    const numberTwo = prompt("请输入第二个值");
+    const operator = prompt("请输入运算符号");
+    const operatorList = ["+", "-", "*", "/"]
+    if (operatorList.indexOf(operator) === -1){
+        alert("程序错误");
+    }else {
+        alert("运算结果为:" + numberOne + operator + numberTwo + "=" +
+            eval(numberOne + operator + numberTwo))
+    }
+</script>
+</body>
+</html>

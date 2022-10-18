@@ -1,0 +1,15 @@
+img {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    border: 10px solid beige;
+    transform: scale(0.3);
+}
+
+img:hover {
+    transition: all 1s ease-in-out 0s ;
+    transform: rotate(0deg) scale(1.5) !important;
+    left: 300px !important;
+    top: 300px !important;
+    z-index: 10 !important;
+}

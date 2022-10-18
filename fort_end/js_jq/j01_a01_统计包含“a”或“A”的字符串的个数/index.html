@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计包含“a”或“A”的字符串的个数</title>
+</head>
+<body>
+<script type="text/javascript">
+  const strList = ["America", "Greece", "Britain", "Canada", "china", "Egypt"];
+  let count = 0;
+  document.write("在以下字符串中<br>");
+  for (const strListKey in strList) {
+    document.write(strList[strListKey] + "<br>")
+    if (strList[strListKey].indexOf("a") !== -1){
+      count++
+      continue
+    }
+    if (strList[strListKey].indexOf("A") !== -1){
+      count++
+    }
+  }
+  document.write("共有" + count + "个字符中包含a或者A")
+
+</script>
+</body>
+</html>

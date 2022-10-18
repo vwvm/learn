@@ -1,0 +1,77 @@
+div {
+    margin: 30px;
+    height: 50px;
+    background-color: #f4f4f4;
+    line-height: 50px
+}
+
+.img1 {
+    float: left;
+    vertical-align: middle;
+}
+
+.img4, .img5, .img6 {
+    float: right;
+    position: relative;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+P {
+    position: relative;
+    margin: 0 50px;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+}
+
+
+.h3 {
+    width: 38px;
+    height: 23px;
+    position: absolute;
+    left: 230px;
+    top: -10px;
+    background-image: url("../images/header_03.png");
+    background-color: #EAFFFA;
+}
+
+.h7 {
+    width: 37px;
+    height: 23px;
+    position: absolute;
+    left: 380px;
+    top: -10px;
+    background-image: url("../images/header_07.png");
+    background-color: #EAFFFA;
+}
+.h7:hover {
+
+    animation: myMove2 1s 1 forwards;
+    /*-webkit-animation: myMove 5s 1*/
+
+}
+.h3:hover {
+
+    animation: myMove 1s 1 forwards;
+    /*-webkit-animation: myMove 5s 1*/
+
+}
+
+@keyframes myMove {
+
+    100% {
+        width: 66px;
+        background-image: url("../images/header_05.png");
+    }
+
+}
+
+@keyframes myMove2 {
+
+    100% {
+        width: 65px;
+        background-image: url("../images/header_09.png");
+    }
+
+}

@@ -1,0 +1,26 @@
+div{
+    width: 1012px;
+    margin:  auto;
+    position: relative;
+}
+
+#img2{
+    position: absolute;
+    top: 200px;
+    left: -250px;
+}
+#img3{
+    position: absolute;
+    top: 200px;
+    right: -165px;
+}
+#img4{
+    position: fixed;
+    bottom: 254px;
+    right: 1px;
+}
+#img5{
+    position: fixed;
+    bottom: 1px;
+    right: 1px;
+}

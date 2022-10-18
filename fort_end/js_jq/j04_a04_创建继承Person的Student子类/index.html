@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="intro"></p>
+<script>
+
+    function Person(name, chinese, math) {
+        this.name = name
+        this.chinese = chinese;
+        this.math = math;
+        this.getName = function () {
+            return this.name
+        }
+        this.getChinese = function () {
+            return this.chinese
+        }
+        this.getMath = function () {
+            return this.math
+        }
+    }
+
+
+    function Student(name, chinese, math, age) {
+        Person.call(this, name, chinese, math)
+        this.age = age;
+        this.getAge = function () {
+            return this.age
+        }
+    }
+
+
+
+    const student = new Student("张三", 98, 80, 25)
+    document.getElementById("intro").innerHTML =
+        "姓名：" + student.getName() + "<br>" +
+        "年龄：" + student.getChinese() + "<br>" +
+        "工作：" + student.getMath() + "<br>" +
+        "地址：" + student.getAge() + "<br>"
+
+
+</script>
+</body>
+</html>

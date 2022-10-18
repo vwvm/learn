@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>完善当当购物车页面</title>
+    <link type="text/css" rel="stylesheet" href="css/cartStyle.css"/>
+</head>
+<body>
+
+<div class="content">
+    <div class="logo">
+        <img src="images/dd_logo.jpg"><span>关闭</span>
+    </div>
+    <div class="cartList">
+        <ul>
+            <li>¥<input type="text" name="price" value="21.90"></li>
+            <li><input type="button" name="minus" value="-"><input type="text" name="amount" value="1"><input
+                    type="button" name="plus" value="+"></li>
+            <li id="price0">¥21.90</li>
+            <li><p onclick="toCollect()">移入收藏</p>
+                <p onclick="shopDelete(this)">删除</p></li>
+        </ul>
+        <ul>
+            <li>¥<input type="text" name="price" value="24.00"></li>
+            <li><input type="button" name="minus" value="-"><input type="text" name="amount" value="1"><input
+                    type="button" name="plus" value="+"></li>
+            <li id="price1">¥24.00</li>
+            <li><p onclick="toCollect()">移入收藏</p>
+                <p onclick="shopDelete(this)">删除</p></li>
+        </ul>
+        <ol>
+            <li id="totalPrice">&nbsp;</li>
+            <li onclick="settleAccounts()"><span>结 算</span></li>
+        </ol>
+    </div>
+</div>
+<script type="text/javascript">
+    function shopDelete(e) {
+        if (confirm("您确定要删除商品吗?")) {
+            console.log(e.parentNode.parentNode)
+            document.getElementsByClassName("cartList")[0].removeChild(e.parentNode.parentNode)
+        }
+    }
+
+    function toCollect() {
+        if (confirm("移入收藏后，将不在购物车显示，是否继续操作?")) {
+            alert("移入收藏成功")
+        }
+
+    }
+
+    function settleAccounts() {
+        if (confirm("您本次购买的商品信息如下\n" +
+            "有品名称:白岩松:白说、岛上书店;\n" +
+            "商品数量:2件:\n" +
+            "商品总计:46.00;\n" +
+            "运费:0元:\n" +
+            "请请认以上信已是否有误!!!")) {
+            alert("订单已提交")
+        }
+    }
+
+    function refresh() {
+
+    }
+
+    let minus = document.getElementsByName("minus");
+    let prices = document.getElementsByName("price");
+    for (const minusKey in minus) {
+        minus[minusKey].onclick = function () {
+            const t1 = --minus[minusKey].nextElementSibling.value
+            document.getElementById("price" + minusKey).innerHTML = "¥" + (prices[minusKey].value * t1).toFixed(2)
+        }
+    }
+    let plus = document.getElementsByName("plus");
+    for (const minusKey in plus) {
+        plus[minusKey].onclick = function () {
+            const t1 = ++plus[minusKey].previousElementSibling.value
+            document.getElementById("price" + minusKey).innerHTML = "¥" + (prices[minusKey].value * t1).toFixed(2)
+        }
+    }
+
+
+</script>
+</body>
+</html>

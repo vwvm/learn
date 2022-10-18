@@ -1,0 +1,1 @@
+读写得input标记的value的值，请读写HTML对象的value属性

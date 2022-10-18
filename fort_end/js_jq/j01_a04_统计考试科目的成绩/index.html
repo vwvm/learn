@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    const scoreNum = Number(prompt("请输入考试科目数量"))
+    let scoreSum = 0
+    if (!isNaN(scoreNum))
+        for (let i = 0; i < scoreNum; i++) {
+            let score = Number(prompt("请输入第" + (i + 1) + "个成绩"))
+            if (isNaN(score)) {
+                alert("成绩必须要为数字")
+                break
+            }
+            if (score < 0) {
+                alert("成绩不能为负数")
+            }
+
+            scoreSum += score
+        }
+
+    alert(scoreNum + "门科目的总成绩为： " + scoreSum);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>课工场论坛列表</title>
+    <link href="css/bbs.css" rel="stylesheet">
+    <script src="../../js/jquery-3.6.1.js"></script>
+    <script>
+        Date.prototype.Format = function (format){
+
+        }
+
+        $(document).ready(function (){
+            $("header span").click(function (){
+                $(".post").show()
+            })
+            $(".btn").click(function (){
+                const title = $(".title").val()
+                const select = $("select").val()
+                const content = $(".content").val()
+                const li = $("<li></li>")
+                li.append("<img src="+"images/tou0"+ Math.floor(Math.random() * 4 + 1) + ".jpg" +">")
+                li.append("<p> " + title + "</p>")
+                li.append("<p> 板块："+ select + "  " + "发表时间："+ new Date +"</p>")
+                $("ul").append(li)
+                $(".post").hide()
+            })
+        })
+    </script>
+    <style>
+        li{
+            height: 100px;
+            border-radius: 4em;
+        }
+        img{
+            border-radius: 50%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="bbs">
+    <header><span>我要发帖</span></header>
+    <section>
+        <ul></ul>
+    </section>
+    <div class="post">
+        <input class="title" placeholder="请输入标题（1-50个字符）">
+        所属版块：<select><option>请选择版块</option><option>电子书籍</option><option>新课来了</option><option>新手报到</option><option>职业规划</option></select>
+        <textarea class="content"></textarea>
+        <input class="btn" value="发布">
+    </div>
+</div>
+
+</body>
+</html>
