@@ -81,4 +81,8 @@ header span {
     border-radius: 8px;
     cursor: pointer;
 }
-
+.bbs section ul li {
+    padding: 10px 0;
+    border-bottom: 1px #999999 dashed;
+    /*overflow: hidden;*/
+}
