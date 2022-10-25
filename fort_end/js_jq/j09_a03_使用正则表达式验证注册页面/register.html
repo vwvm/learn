@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用正则表达式验证注册页面</title>
+    <link rel="stylesheet" href="css/register.css">
+	<script src="../js/jquery-3.6.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			function formLogin(strA, strB, strFo, DivValue) {
+				strFo = new RegExp(strFo)
+				$(strA).blur(function () {
+					const value = $(this).val()
+					if (value.length === 0) {
+						$(strB).text("不能为空")
+						return 1
+					}
+					if (strFo.exec(value) == null) {
+						$(strB).text(DivValue)
+						return 2
+					}
+					return 0
+				}).focus(function (){
+					$(strB).text("")
+				})
+			}
+            //匹配不成功后str4
+			formLogin("#user", "#user_prompt", "[a-zA-Z0-9]{4-16}", "用户名由英文字母和数字组成的4-16位字符，以字母开头")
+			formLogin("#pwd", "#pwd_prompt", "[a-zA-Z0-9]{4-10}", "密码由英文字母和数字组成的4-10位字符")
+			formLogin("#mobile", "#mobile_prompt", "^1[0-9]{10}$", "只能是1开头的11个数字")
+            formLogin("#birth", "#birth_prompt", "^(19[0-9]{2}|200[0-9]|201[0-6])$", "生日的年份为1900-2016")
+
+			// formLogin("#email", "#DivEmail", "^([^\.]*)|([^@]*)$", "邮箱需包含@或者.")
+		})
+
+	</script>
+</head>
+
+<body>
+<section id="register">
+    <div><img src="images/logo.jpg" alt="logo"/><img src="images/banner.jpg" alt="banner"/></div>
+    <h1 class="hr_1">新用户注册</h1>
+    <form action="" method="post" name="myform">
+        <dl>
+            <dt>用户名：</dt>
+            <dd><input id="user" type="text"/>
+                <div id="user_prompt"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>密码：</dt>
+            <dd><input id="pwd" type="password"/>
+                <div id="pwd_prompt"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>确认密码：</dt>
+            <dd><input id="repwd" type="password"/>
+                <div id="repwd_prompt"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>电子邮箱：</dt>
+            <dd><input id="email" type="text"/>
+                <div id="email_prompt"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>手机号码：</dt>
+            <dd><input id="mobile" type="text"/>
+                <div id="mobile_prompt"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>生日：</dt>
+            <dd><input id="birth" type="text"/>
+                <div id="birth_prompt"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>&nbsp;</dt>
+            <dd><input name="" type="image" src="images/register.jpg" class="btn"/></dd>
+        </dl>
+    </form>
+</section>
+</body>
+</html>

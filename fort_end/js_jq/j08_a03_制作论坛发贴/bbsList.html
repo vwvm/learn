@@ -18,7 +18,7 @@
                 const content = $(".content").val()
                 const li = $("<li></li>")
                 li.append("<img src="+"images/tou0"+ Math.floor(Math.random() * 4 + 1) + ".jpg" +">")
-                li.append("<h3> " + title + "</h3>")
+                li.append("<h1> " + title + "</h1>")
                 li.append("<p> 板块："+ select + "  " + "发表时间："+ dateFormat("YYYY-mm-dd HH:MM",new Date()) +"</p>")
                 $("ul").append(li)
                 $(".post").hide()
@@ -28,14 +28,17 @@
     <style>
         li{
             height: 100px;
-            border-radius: 4em;
         }
         img{
             border-radius: 50%;
             float: left;
+            margin-right: 30px;
         }
-        h3{
-
+        h1{
+            line-height: 40px;
+        }
+        p{
+            line-height: 40px;
         }
     </style>
 </head>
