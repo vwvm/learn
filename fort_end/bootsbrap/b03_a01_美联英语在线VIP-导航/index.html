@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        ul li {
+            background: #000032;
+            height: 50px;
+            color: #F8F8F3;
+            list-style-type: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("ul li").addClass("col")
+        })
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <ul class="list-group list-group-flush list-group-horizontal text-center row  ">
+        <li>
+            <svg class="bi text-white align-items-center" width="16" height="16" fill="currentColor">
+                <use xlink:href="../bootstrap-icons-1.9.1/bootstrap-icons.svg#house-door-fill" />
+            </svg>
+            首页
+        </li>
+        <li>
+            <svg class="bi text-white align-items-center" width="16" height="16" fill="currentColor">
+                <use xlink:href="../bootstrap-icons-1.9.1/bootstrap-icons.svg#gift-fill" />
+            </svg>
+            通用英语
+        </li>
+        <li>
+            <svg class="bi text-white align-items-center" width="16" height="16" fill="currentColor">
+                <use xlink:href="../bootstrap-icons-1.9.1/bootstrap-icons.svg#pen-fill" />
+            </svg>
+            海外考试
+        </li>
+        <li>
+            <svg class="bi text-white align-items-center" width="16" height="16" fill="currentColor">
+                <use xlink:href="../bootstrap-icons-1.9.1/bootstrap-icons.svg#lamp-fill" />
+            </svg>
+            青少英语
+        </li>
+        <li>
+            <svg class="bi text-white align-items-center" width="16" height="16" fill="currentColor">
+                <use xlink:href="../bootstrap-icons-1.9.1/bootstrap-icons.svg#archive-fill" />
+            </svg>
+            行业英语
+        </li>
+        <li>
+            <svg class="bi text-white align-items-center" width="16" height="16" fill="currentColor">
+                <use xlink:href="../bootstrap-icons-1.9.1/bootstrap-icons.svg#cart-fill" />
+            </svg>
+            在线购买
+        </li>
+        <li>
+            <svg class="bi text-white align-items-center" width="16" height="16" fill="currentColor">
+                <use xlink:href="../bootstrap-icons-1.9.1/bootstrap-icons.svg#person-fill" />
+            </svg>
+            全球师资
+        </li>
+        <li >
+            <div class="dropdown">
+                <a type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+                    下拉菜单按钮
+                </a>
+                <div class="dropdown-menu text-center">
+                    <a class="dropdown-item" href="#">学员案例</a>
+                    <a class="dropdown-item" href="#">免费体验</a>
+                    <a class="dropdown-item" href="#">英语胶囊</a>
+                    <a class="dropdown-item" href="#">精彩动态</a>
+                </div>
+            </div>
+
+        </li>
+    </ul>
+
+
+</div>
+
+
+</body>
+</html>

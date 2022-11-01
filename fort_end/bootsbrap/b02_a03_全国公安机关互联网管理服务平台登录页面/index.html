@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        a {
+            text-decoration: none
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("div a").addClass("text-primary").hover(function () {
+                $(this).addClass("text-danger")
+            })
+        })
+    </script>
+</head>
+<body>
+<header class="container">
+    <div class="row">
+        <img src="image/logo.png" alt="" class="col-3">
+        <div class="col-5 offset-4">
+            <form class="row">
+                <div class="col-4 offset-3"><input value="请输入要搜索的内容" class="form-control"/></div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-success">搜索</button>
+                </div>
+            </form>
+            <a>首页</a>
+            <a>公共查询</a>
+            <a>常见问题</a>
+            <a>政策法规</a>
+            <a>通知公告</a>
+            <a>备案须知</a>
+            <a>备案展厅</a>
+        </div>
+    </div>
+
+</header>
+<main class="container-fluid" style="background: url('image/adbg.png') no-repeat; height: 400px">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div><img src="image/xcy.png" alt=""></div>
+                <div><img src="image/liucheng.png" alt=""></div>
+            </div>
+            <div class="col container mt-3" style="background: #F8F8F3 repeat; ">
+                <h4>普通用户</h4>
+                <form class="row" action="">
+
+                    <div class="mb-3 mt-3 row">
+                        <div class="col-3 text-center">
+                            <label for="email" class="form-label">用户名:</label>
+                        </div>
+                        <div class="col">
+                            <input type="email" class="form-control" id="email" placeholder="" name="email">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="col-3 text-center">
+                            <label for="pwd" class="form-label">密码:</label>
+                        </div>
+                        <div class="col">
+                            <input type="password" class="form-control  " id="pwd" placeholder="" name="pswd">
+                        </div>
+                    </div>
+                    <div class="form-check mb-3 col-8 offset-3">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> 记住密码
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary col-6 offset-3">登录</button>
+                    <a class="col-6 offset-3 text-primary">没有账号，注册</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</main>
+<footer>
+    <p class="text-center">Copyright2015公安部网络安全保卫局All Rights Reserved</p>
+    <p class="text-center">邮箱:support@beian.gov.cn</p>
+    <p class="text-center">京公网安备11010102002019号建议使用1024768以上分辨率浏览</p>
+</footer>
+
+</body>
+</html>

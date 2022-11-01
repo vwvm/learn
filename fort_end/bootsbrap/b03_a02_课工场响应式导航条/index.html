@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        #container {
+            background: black;
+        }
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+    <div class="container-fluid  ">
+        <a class="navbar-brand">
+            <img src="image/logo.png">
+        </a>
+        <ul class="nav ">
+            <li class="nav-item d-block d-sm-block  d-md-none">
+                <a class="nav-link text-white" href="javascript:void(0)">登录</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="javascript:void(0)">注册</a>
+            </li>
+        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">入门课</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">岗位课</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">技能库</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">微社区</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0) ">学员
+                        <button class="nav-link navbar-nav btn btn-primary btn-sm btn-danger text-nowrap" type="button"
+                                style=" height: 20px;font-size: 10px; padding-bottom: 0;padding-top: 0; display: inline-block">
+                            NEW
+                        </button>
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto justify-content-end text-nowrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">登录</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">注册</a>
+                </li>
+            </ul>
+        </div>
+        <div class=" collapse navbar-collapse justify-content-end">
+            <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="请输入要搜索的内容">
+                <button class="btn btn-primary text-nowrap btn-success" type="button">搜索</button>
+            </form>
+        </div>
+
+
+    </div>
+</nav>
+<script>
+    $("")
+    $(window).scroll(function () {
+        //小屏幕下的导航条折叠
+        if ($(window).width() < 768) {
+            console.log("hh")
+            $("#navbar").collapse('hide');
+
+            //滚动屏幕时，把导航选项折叠起来
+            $(window).scroll(function () {
+                $("#navbar").collapse('hide');
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
