@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script>
+        $(document).ready(function () {
+            const txtList = ["齐秦-女人花", "郁可唯-失态消失 ", "阿兰-你的眼神", "Super-Junlor",
+                "阿兰-为爱成宪", "祁隆-一万个对不起", "崔子格-不再联系", "李代沫-简单的事",
+                "张惠妹-爱我吗", "黄琦珊-离不开你", "夏天-不再联系", "凤凰传奇-自由自在"]
+            for (let i = 1; i < 13; i++) {
+                const img = "image/" + i + ".jpg"
+                $(".row").append(
+                    "<div class='col-xl-2 col-sm-6' >" +
+                    "<div class='img-thumbnail' >" +
+                    "<img src=" + img + ">" +
+                    "<p>" + txtList[i-1] +"</p>" +
+                    "</div></div>")
+            }
+        })
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>本周MV下载排行榜</h1>
+    <div class="row">
+
+    </div>
+</div>
+
+</body>
+</html>

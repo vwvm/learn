@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row" style="margin-top: 50px">
+        <button class="btn btn-primary text-nowrap col-1 offset-10" type="button"
+                data-bs-toggle="modal" data-bs-target="#baiduLogin"
+        >登录</button>
+    </div>
+    <form class="d-flex" style="margin-top: 50px">
+        <input class="form-control" type="text" placeholder="请输入要搜索的内容">
+        <button class="btn btn-primary text-nowrap" type="button">百度一下</button>
+    </form>
+</div>
+<!-- 模态 -->
+<div class="modal" id="baiduLogin">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- 模态标题 -->
+            <div class="modal-header">
+                <h4 class="modal-title">登录百度账号</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- 模态主体 -->
+            <div class="modal-body ">
+                <input class="form-control mt-3" type="text" placeholder="手机/邮箱/用户名">
+                <input class="form-control mt-3" type="text" placeholder="密码">
+                <input class="form-check-input mt-3" type="checkbox" name="remember"> 下次自动登录
+            </div>
+
+            <!-- 模态页脚 -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary container" data-bs-dismiss="modal">登录</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

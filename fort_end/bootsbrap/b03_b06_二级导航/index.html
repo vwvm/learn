@@ -5,7 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <title>二级导航</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <style>
 
     </style>
@@ -14,14 +17,33 @@
 <div style="height:300px;"></div>
 
 <div class="container" style="margin: 20px">
-
-
-
-
-
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item dropup">
+            <a class="nav-link dropdown-toggle " data-bs-toggle="dropdown" href="#">Dropdown</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">教育</a></li>
+                <li><a class="dropdown-item" href="#">IT</a></li>
+                <li><a class="dropdown-item" href="#">亲子</a></li>
+                <li><a class="dropdown-item" href="#">母婴</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " data-bs-toggle="dropdown" href="#">Dropdown</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">收藏</a></li>
+                <li><a class="dropdown-item" href="#">关于我们</a></li>
+                <li><a class="dropdown-item" href="#">联系卖家</a></li>
+                <li><a class="dropdown-item" href="#">退换货</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>
 
-<script src="js/jquery-1.12.4.js"></script>
-<script src="js/bootstrap.js"></script>
 </body>
 </html>

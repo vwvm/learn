@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+
+    </style>
+
+</head>
+<body>
+<div class="container container-sm mt-3 border border-primary">
+    <ul class="nav nav-tabs" id="myTab" >
+        <li class="nav-item">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#journalism" type="button" role="tab" aria-controls="home" aria-selected="true">新闻</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#recreation" type="button" role="tab" aria-controls="profile" aria-selected="false">娱乐</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#mil" type="button" role="tab" aria-controls="messages" aria-selected="false">军事</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#society" type="button" role="tab" aria-controls="settings" aria-selected="false">社会</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="sports-tab" data-bs-toggle="tab" data-bs-target="#sports" type="button" role="tab" aria-controls="settings" aria-selected="false">体育</button>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active mt-3" id="journalism" role="tabpanel" aria-labelledby="home-tab">
+            <img src="image/1.jpg">
+            <p>
+                ·村主任看风水收费一万不算违纪？<br>
+                ·女经理色诱警官卖17台伪劣安检机<br>
+                ·男子一夜情后疑染病将女子推下楼<br>
+                ·网传四川成都一女性头部被人割掉<br>
+                ·游客遭老虎咬死专家称园方无责任
+            </p>
+        </div>
+        <div class="tab-pane fade  mt-3" id="recreation" role="tabpanel" aria-labelledby="profile-tab">
+            <img src="image/2.jpg">
+            <p>
+                ·尺度大！陈乔恩录节目现场脱胸罩<br>
+                ·赵薇凭什么首任威尼斯电影节评委<br>
+                ·他是中国首位入狱童星今二度被捕<br>
+                ·天这么热吴尊却不爱洗澡杨幂脚臭<br>
+                ·辣眼睛！女主播直播风油精滴下体
+            </p>
+        </div>
+        <div class="tab-pane fade  mt-3" id="mil" role="tabpanel" aria-labelledby="messages-tab">
+            <img src="image/3.jpg">
+            <p>
+                ·斯诺登再曝绝密 美暗中攻击他们<br>
+                ·菲对比中菲军力 曝结果令其绝望<br>
+                ·中国使必杀一招 美在南海投降了<br>
+                ·红旗9突然撤下永兴岛 绝密曝光<br>
+                ·张召忠对南海霸气表态 美日胆寒
+            </p>
+        </div>
+        <div class="tab-pane fade  mt-3" id="society" role="tabpanel" aria-labelledby="settings-tab">
+            <img src="image/4.jpg">
+            <p>
+                ·夫妻后院发现巨型鸵鸟蛋真相惊呆<br>
+                ·YY直播不雅视频10岁女孩现场脱衣<br>
+                ·抢劫犯弃新婚妻带小姨子潜逃28年<br>
+                ·婆婆与儿媳同生娃孙子比儿子还大<br>
+                ·网红生产线：21岁小伙年入百万元
+            </p>
+        </div>
+        <div class="tab-pane fade  mt-3" id="sports" role="tabpanel" aria-labelledby="settings-tab">
+            <img src="image/5.jpg">
+            <p>
+                曼联全队 离京穆帅告别红魔球迷<br>
+                ·十大看点引爆国安恒大工体对决<br>
+                ·国足集训名单：没球踢3将入选<br>
+                ·中超赛场暴力冲突堪比格斗大赛<br>
+                ·巴萨赴英国备战 梅西换新造型
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var firstTabEl = document.querySelector('#myTab li:last-child a')
+        var firstTab = new bootstrap.Tab(firstTabEl)
+
+        firstTab.show()
+    </script>
+</div>
+</body>
+</html>
